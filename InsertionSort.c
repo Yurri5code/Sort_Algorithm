@@ -59,6 +59,24 @@ cle = 3
 dans la boucle 
 deplacement vers la gauche 
 */
+
+// ajout de la fonction du tri par insertion qui fonction sur le meme mode que insertionSort1
+void insertionSort2(int n, int arr_count, int* arr) {
+    for(int i = 1;i<n;i++){
+        int cle = arr[i];
+        int j = i -1;
+        while(j>= 0 && arr[j]>cle){
+            arr[j+1] = arr[j];
+            j--;
+        }
+        arr[j+1] = cle;
+        for(int i =0;i<n;i++){
+            printf("%d ",arr[i]);
+        }
+        printf("\n");
+    }
+}
+
 int main()
 {
     int tab[5] = {2,4,6,8,3};
